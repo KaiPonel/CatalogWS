@@ -1,6 +1,6 @@
 # Katalog WebApp
 - Dieses Projekt umfasst eine komplette Web-App zum Katalogisieren von Gegenständen.
-- Ziel war es, dass ein authentifizierter Client Gegenständen erstellen, bearbeiten, löschen und nach ihnen Suchen/Sortieren kann.
+- Ein Client kann Gegenständen erstellen, bearbeiten, löschen und nach ihnen Suchen/Sortieren.
 - Die Website ist durch ein Authentifizierungsprozess geschützt, was bedeutet dass alle Seiten bis auf die Startseite nur mit einem Login eingesehen werden können.
 
 ## Verwendete Techniken
@@ -16,8 +16,11 @@ Das Projekt ist in einzelne Apps unterteilt. Diese Apps sind auf einzelne Aufgab
 - login (Alle Operationen bezogen auf Benutzer)
 - pages (Alle Operationen welche keine Datenbank benötigen)
 
+Für mehr Informationen zum Aufbau einer Web-Application mithilfe von Django, siehe [hier](https://docs.djangoproject.com/en/3.2/intro/overview/)
+
 ## Disclaimer
-- Dieses Projekt entstand für einen einzigen, sehr speziellen Anwendungsfall. Soll der Anwendungsfall angepasst werden, müssen die Attribute in der App "items" angepasst werden.
+- Dieses Projekt ist für einen einzigen, sehr speziellen Anwendungsfall konzipiert worden. 
+- Soll der Anwendungsfall angepasst werden, müssen die Attribute in der App "items" angepasst werden.
 - Sensitive Daten wie bspw. die Inhalte der Datenbank oder der Django Secret-Key wurden entfernt. Alle im Code veränderten Stellen wurden dementsprechend markiert.
 
 ## Demo
