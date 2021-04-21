@@ -1,0 +1,78 @@
+{% extends "main/base.html" %}
+{%block content%}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}">
+{% for field in fields%}
+    {% if field.2 == "item_Image" and field.1 != "" %}
+<div class="imageDiv m-3">
+<img src="../../../media/{{field.1}}" alt="Bild" class="mx-auto d-block" style="width: 75%; max-width: 600px">
+    </div>
+  {%endif%}
+  {%endfor%}
+<div class="i-am-centered">
+<div class="row h-100">
+<table class="text-left">
+  <thead>
+    <tr>
+      <th class="text-left" scope="col">Eigenschaft</th>
+      <th class="text-left" scope="col">Wert</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for field in fields%}
+    {% if field.2 != "item_Image" %}
+    {% if field.1 == "" or field.1 is None%}
+   <tr>
+      <td class="text-left font-weight-bold">{{field.0}}</td>
+      <td class="text-left">Kein Wert angegeben</td>
+    </tr>
+  {%else%}
+    <tr>
+      <td class="text-left font-weight-bold">{{field.0}}</td>
+      <td class="text-left">{{field.1}}</td>
+    </tr>
+  {%endif%}
+  {%endif%}
+  {%endfor%}
+  </tbody>
+</table>
+    </div>
+
+
+
+
+
+
+
+
+ <!--<tr>
+     <script>
+         console.log("{{field.1}}")
+     </script>
+        <td colspan="2" class="table-light"style="
+            max-height: 100%;
+            max-width: 100%
+
+"><img src="../../../media/{{field.1}}" alt="Bild" style="width: 100%; max-width: 600px"></td>
+    </tr>
+-->
+     </tbody>
+     </table>
+        </div>
+<div class="text-center m-3" style="padding-bottom: 50px">
+     <button class="btn btn-warning" onclick="location.href= '{%url 'item-edit' fields.0.1%}'">
+    Bearbeiten
+  </button>
+    <button class="btn btn-danger" onclick="
+    if (confirm('Willst du den Gegestand wirklich löschen?')){
+    location.href= '{%url 'item-delete' fields.0.1%}'}">
+        Löschen
+    </button>
+  </button>
+    </div>
+        </div>
+    </div>
+</div>
+<div class=""></div>
+{%endblock content%}

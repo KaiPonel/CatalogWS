@@ -1,0 +1,35 @@
+{% extends "main/base.html" %}
+{%block content%}
+<div class="row align-items-center">
+    <div class="col-4"></div>
+    <div class="col-4 align-items-center text-center">
+<table class="w-50 table table-bordered w-100 text-center align-self-center " id="">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Kategorie</th>
+            <th scope="col">Art</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody id ="tableContent table-hover">
+{% for catData in catDatas%}
+{%if catData.greyed_out == True%}
+    <tr>
+        <td class="table-secondary font-weight-bold">{{catData.name}}</td>
+        <td class="table-secondary font-italic">{{catData.catType}}</td>
+        <td class="table-secondary">Bearbeiten nicht möglich</td>
+    </tr>
+{%else%}
+<tr>
+        <td class="table-light font-weight-bold">{{catData.name}}</td>
+        <td class="table-light">{{catData.catType}}</td>
+         <!--<td class = "table-light"><a href="{url 'categorie-edit'}"></a></td> ToDo: CategorieID -->
+    </tr>
+{%endif%}
+{%endfor%}
+     </tbody>
+     </table>
+        </div>
+    </div>
+<div class="col-4"></div>
+{%endblock content%}

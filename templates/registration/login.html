@@ -1,0 +1,15 @@
+{% extends "baseBackground.html" %}
+{% block content %}
+ <div class="container-fluid">
+        <div class="row h-100 align-items-center">
+            <div class="col-sm-12 text-center">
+                <h2 class="text-center">Glass Katalog</h2>
+                <form method="POST"> {% csrf_token %}
+                   {{ form.as_p }}
+                    <input type="submit" value ="Login"/>
+                </form>
+                <p class="text-center">Created by Kai Ponel</p>
+            </div>
+        </div>
+    </div>
+{%endblock content%}

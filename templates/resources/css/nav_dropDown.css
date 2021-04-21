@@ -1,0 +1,41 @@
+.selector{
+	 margin: 0 auto;
+	display: inline-block;
+}
+.search{
+	display: inline-block;
+}
+.totalBox{
+	display: inline;
+}
+.searchBar{
+	 display: inline-block;
+}
+
+@media only screen and (max-width: 700px) {
+	.totalBox{
+		display: block !important;
+		align-content: center;
+	}
+  /* For mobile phones: */
+  .cats {
+	  color: #1b1e21;
+  }
+  .searchButton{
+	   display: inline-block;
+  }
+  .searchBar{
+	  display: inline-block;
+	  width: 55% !important;
+	  margin: unset !important;
+  }
+	.search{
+		display: inline-block;
+		width: 100%;
+		margin: 0 auto !important;
+		align-content: center;
+	}
+	.selector{
+		margin: fill;
+	}
+}

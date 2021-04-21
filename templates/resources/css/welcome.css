@@ -1,0 +1,12 @@
+/* Main Page */
+.btn-xl{
+    font-size: 30px;
+    padding: 10px 50px;
+    border-radius: 30px;
+}
+.container-fluid{
+    height: 100%;
+}
+.numField{
+    max-width: 2%;
+}

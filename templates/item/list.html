@@ -1,0 +1,23 @@
+{% extends "main/base_List.html" %}
+{%block content%}
+  {% load static %}
+    <link rel="stylesheet" href="{% static 'css/item_list.css' %}" type="text/css">
+<div class="conatiner">
+    <div class="wrap">
+ {% for instance in object_list %}
+	<div class="box {{forloop.counter0}}" onclick = "window.open('{{instance.get_absolute_url}}', '_self')" style="
+	background: url('../../media/{{instance.item_Image}}');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    position: relative">
+        <div class="" style="bottom: -8px; position: absolute; width: 100%">
+		<h1 style="">{{instance.name}}</h1>
+            </div>
+	</div>
+    {% endfor %}
+</div>
+</div>
+
+
+{%endblock%}
